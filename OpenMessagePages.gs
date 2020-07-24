@@ -65,7 +65,7 @@ function openMessagePages() {
   const usernames = cellValues.filter(
     val => (typeof val === "string" && usernamePattern.test(val.trim()))
   );
-  const urls = usernames.map(val => baseUrl + val);
+  const urls = usernames.map(val => baseUrl + val.trim());
   
   openURLs(urls);
 }
